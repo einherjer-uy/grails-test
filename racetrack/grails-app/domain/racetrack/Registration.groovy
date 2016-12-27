@@ -2,6 +2,9 @@ package racetrack
 
 class Registration {
 
+	Boolean paid
+	Date dateCreated //Note: this is a special name
+
 	static constraints = {
 		race()
 		runner()
@@ -10,9 +13,6 @@ class Registration {
 	}
 
 	static belongsTo = [race:Race, runner:Runner]
-
-	Boolean paid
-	Date dateCreated //Note: this is a special name
 
     static mapping = {
 		//autoTimestamp false

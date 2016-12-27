@@ -2,6 +2,16 @@ package racetrack
 
 class Runner {
 
+    String firstName
+    String lastName
+    Date dateOfBirth
+    String gender
+    String address
+    String city
+    String state
+    String zipcode
+    String email
+
     static constraints = {
         firstName(blank:false)
         lastName(blank:false)
@@ -15,16 +25,6 @@ class Runner {
     }
 
     static hasMany = [registrations:Registration]
-
-    String firstName
-    String lastName
-    Date dateOfBirth
-    String gender
-    String address
-    String city
-    String state
-    String zipcode
-    String email
 
     String toString(){
         "${lastName}, ${firstName} (${email})"
